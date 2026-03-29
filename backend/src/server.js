@@ -21,7 +21,7 @@ const server = http.createServer(app);
 // Initialize Socket.io with CORS
 const io = new Server(server, {
   cors: {
-    origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
+    origin: process.env.CORS_ORIGIN || 'http://localhost:3000'||  'https://chitchatkro.netlify.app',
     methods: ['GET', 'POST'],
     credentials: true
   }
@@ -35,7 +35,7 @@ app.use(helmet());
 
 // CORS configuration
 app.use(cors({
-  origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
+  origin: process.env.CORS_ORIGIN || 'http://localhost:3000'||  'https://chitchatkro.netlify.app',
   credentials: true
 }));
 
